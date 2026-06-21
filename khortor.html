@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khortorr | คู่มือการใช้งาน</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text-main: #333333;
+            --text-muted: #666666;
+            --border: #eaeaea;
+            --highlight: #f9f9f9;
+            --accent: #000000;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', 'Sarabun', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+        header {
+            margin-bottom: 40px;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #111;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+        /* Support Box */
+        .support-box {
+            background-color: var(--highlight);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .support-text h2 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #111;
+            margin-bottom: 4px;
+        }
+        .support-text p {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+        .btn-ig {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #fff;
+            color: #111;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 1px solid #ccc;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .btn-ig:hover {
+            background-color: #f0f0f0;
+            border-color: #999;
+        }
+        .btn-ig svg {
+            width: 16px;
+            height: 16px;
+        }
+        /* Content Sections */
+        section {
+            margin-bottom: 40px;
+        }
+        h2.section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #111;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+        }
+        h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin: 24px 0 12px;
+            color: #222;
+        }
+        p {
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+        }
+        ul,
+        ol {
+            padding-left: 24px;
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        li strong {
+            color: #111;
+            font-weight: 600;
+        }
+        .note {
+            background-color: var(--highlight);
+            border-left: 3px solid #ccc;
+            padding: 12px 16px;
+            font-size: 0.875rem;
+            color: #555;
+            margin: 16px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            background-color: var(--highlight);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            color: #333;
+            border: 1px solid var(--border);
+        }
+        footer {
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            text-align: left;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+        @media (max-width: 600px) {
+            .support-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .btn-ig {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+            .container {
+                padding: 0;
+                max-width: 100%;
+                margin: 0;
+            }
+            .no-print {
+                display: none !important;
+            }
+            section {
+                page-break-inside: avoid;
+                margin-bottom: 24px;
+            }
+            .support-box {
+                border: 1px solid #000;
+                break-inside: avoid;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            footer {
+                margin-top: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px;">
+            <div>
+                <h1>คู่มือการใช้งาน Khortorr</h1>
+                <p class="subtitle">แอปพลิเคชันสำหรับติดตามอาการปวด ตรวจวัดการเคลื่อนไหว และฟื้นฟูสุขภาพข้อต่อ</p>
+            </div>
+            <button onclick="window.print()" class="btn-ig no-print" style="cursor: pointer; background-color: #111; color: #fff;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                บันทึกเป็น PDF
+            </button>
+        </header>
+        <section>
+            <h2 class="section-title">1. การเริ่มต้นใช้งานและการประเมินอาการ (Onboarding & Pain Check-in)</h2>
+            <p>เมื่อเข้าสู่ระบบครั้งแรก หรือในแต่ละวัน คุณจะเข้าสู่หน้าประเมินอาการเบื้องต้น:</p>
+            <ol>
+                <li><strong>การสร้างโปรไฟล์:</strong> กรอกข้อมูลพื้นฐานเพื่อให้ระบบแนะนำแผนการดูแลที่เหมาะสมเฉพาะคุณ</li>
+                <li><strong>ประเมินอาการปวด (Pain Check-in):</strong> ระบุระดับความเจ็บปวดและบริเวณที่มีอาการในแต่ละวัน เพื่อให้ระบบช่วยติดตามแนวโน้ม</li>
+            </ol>
+        </section>
+        <section>
+            <h2 class="section-title">2. หน้าหลักและศูนย์รวมฟีเจอร์สุขภาพ (Home & Hub)</h2>
+            <p>หน้าหลักของแอปจะเป็นศูนย์กลางการจัดการสุขภาพของคุณ โดยมีส่วนประกอบดังนี้:</p>
+            <div class="note">
+                <strong>เคล็ดลับ:</strong> คุณสามารถดูความคืบหน้าต่างๆ ได้จากหน้าหลัก เพื่อสร้างแรงจูงใจในการฟื้นฟูและออกกำลังกายอย่างต่อเนื่อง
+            </div>
+            <h3>ฟีเจอร์เด่นใน Hub</h3>
+            <ul>
+                <li><strong>ภารกิจและรางวัล (Quests & Badges):</strong> ทำภารกิจประจำวันเพื่อรับเหรียญรางวัลเป็นกำลังใจ</li>
+                <li><strong>ตารางจัดอันดับ (Leaderboard):</strong> เทียบความสม่ำเสมอในการออกกำลังกายกับผู้ใช้งานอื่น</li>
+                <li><strong>คลินิกและข้อมูลสุขภาพ (Clinic & Vitals):</strong> บันทึกค่าสุขภาพต่างๆ และเชื่อมโยงข้อมูลกับคลินิก</li>
+                <li><strong>โภชนาการและอุปกรณ์สวมใส่ (Diet & Wearables):</strong> ติดตามอาหารที่ทาน และซิงค์ข้อมูลกับสมาร์ทวอทช์</li>
+            </ul>
+        </section>
+        <section>
+            <h2 class="section-title">3. การตรวจวัดช่วงการเคลื่อนไหวด้วยกล้อง (Camera & ROM)</h2>
+            <p>คุณสมบัติเด่นของ Khortorr คือการใช้กล้อง AI ในการตรวจวัดองศาการเคลื่อนไหวของข้อต่อ (Range of Motion)</p>
+            <ul>
+                <li><strong>วิธีการใช้งาน:</strong> วางโทรศัพท์มือถือในจุดที่กล้องสามารถมองเห็นตัวคุณได้ชัดเจนเต็มตัว จากนั้นให้ขยับข้อต่อตามที่แอปแนะนำ</li>
+                <li><strong>ความแม่นยำสูง:</strong> ระบบทำงานด้วยเทคโนโลยี AI ตรวจจับข้อต่อและประเมินองศาการเคลื่อนไหวโดยอัตโนมัติแบบเรียลไทม์</li>
+                <li><strong>ข้อควรระวัง:</strong> ควรใช้งานในพื้นที่ที่มีแสงสว่างเพียงพอ ไม่ย้อนแสง และสวมใส่เสื้อผ้าที่รัดรูปหรือเห็นสัดส่วนได้ชัดเจนเพื่อการจับภาพที่แม่นยำที่สุด</li>
+            </ul>
+        </section>
+        <section>
+            <h2 class="section-title">4. สถิติ คลังความรู้ และประวัติการรักษา (Analytics & Library)</h2>
+            <p>คุณสามารถติดตามความก้าวหน้าและเรียนรู้วิธีการดูแลตัวเองอย่างถูกต้องในหมวดนี้:</p>
+            <ul>
+                <li><strong>สถิติเชิงลึก (Analytics):</strong> ดูกราฟแนวโน้มอาการปวด ควบคู่กับองศาการเคลื่อนไหวที่พัฒนาขึ้น</li>
+                <li><strong>ประวัติ (History):</strong> ย้อนดูผลการประเมินหรือการทำกายภาพของคุณในอดีต</li>
+                <li><strong>คลังความรู้ (Library):</strong> รวมบทความ วิดีโอสอนท่าบริหาร และคำแนะนำจากผู้เชี่ยวชาญเพื่อช่วยฟื้นฟูข้อต่อและรักษาสุขภาพของคุณ</li>
+            </ul>
+        </section>
+        <footer style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px;">
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="margin-top: 0; margin-bottom: 12px; font-size: 1rem; color: #111;">สนับสนุนการพัฒนา</h3>
+                <a href="https://ezdn.app/Bungkii88888" target="_blank" class="btn-ig no-print" style="display: inline-flex; align-items: center; gap: 8px; background-color: #111; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; font-weight: 500; border: none;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2v20"></path>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                    โดเนทเด็กชายบุ้งกี๋
+                </a>
+                <p style="margin-top: 24px; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;">&copy; Khortorr Application</p>
+            </div>
+            <div class="no-print" style="flex: 1; min-width: 300px; display: flex; justify-content: flex-end;">
+                <iframe src="https://widgets.easydonate.app?w=leaderboard&u=sx6uqk3osnikyl09f9oreie6&t=3a0476242f3ed406c2bb6d4a374ec7c3&ts=1782016564160" width="100%" height="250" frameborder="0" style="max-width: 350px; border-radius: 8px; border: 1px solid var(--border); background-color: var(--highlight);"></iframe>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
